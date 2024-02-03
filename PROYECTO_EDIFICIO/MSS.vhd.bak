@@ -1,0 +1,134 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity MSS is
+    Port ( SL1,SL2,SL3,SP1, SP2, SP3, Start, Reset, Clock,FinR,FinW: in STD_LOGIC;
+           ENP1, ENP2, ENP3,W/R,EnR,EnW,EnReg1,EnReg2,EnReg3 : out STD_LOGIC;
+			  sel_tiempo: out std_logic_vector(1 downto 0));
+end MSS;
+
+architecture Behavioral of MSS is
+    type Estado is (Inicio, EsperandoStart, EsperandoPersonas, EncendidoP1, EncendidoP2, EncendidoP3,FinEsc,FinLec);
+    signal estadoActual, estadoSiguiente : Estado;
+	 signal selector: std_logic_vector(1 downto 0);
+
+begin
+    proceso_estados: process (Clock, Reset)
+    begin
+        if (Reset = '1') then
+            estadoActual <= Inicio;
+        elsif rising_edge(Clock) then
+            estadoActual <= estadoSiguiente;
+        end if;
+    end process proceso_estados;
+
+    proceso_transiciones: process (estadoActual, SL1,SL2,SL3,SP1, SP2, SP3,FinR,FinW, Start)
+    begin
+        case estadoActual is
+            when Inicio =>
+                if (Start = '1') then
+                    estadoSiguiente <= EsperandoStart;
+                else
+                    estadoSiguiente <= Inicio;
+                end if;
+
+            when EsperandoStart =>
+                if (Start = '0') then
+                    estadoSiguiente <= EsperandoPersonas;
+                else
+                    estadoSiguiente <= EsperandoStart;
+                end if;
+
+            when EsperandoPersonas =>
+                if (SP1 = '1' and SL1 ='1' ) then
+                    ENP1 <= '1';
+                    ENP2 <= '0';
+                    ENP3 <= '0';
+						  sel_tiempo <='00';
+						  W/R <='1';
+						  EnW<='1';
+                    estadoSiguiente <= EncendidoP1;
+                elsif (SP2 = '1' and SL2 ='1') then
+                    ENP1 <= '0';
+                    ENP2 <= '1';
+                    ENP3 <= '0';
+						  sel_tiempo <='01';
+						  W/R <='1';
+						  EnW<='1';
+                    estadoSiguiente <= EncendidoP2;
+                elsif (SP3 = '1' SL3='1') then
+                    ENP1 <= '0';
+                    ENP2 <= '0';
+                    ENP3 <= '1';
+						  sel_tiempo <='10';
+						  W/R <='1';
+						  EnW<='1';
+                    estadoSiguiente <= EncendidoP3;
+                else
+                    ENP1 <= '0';
+                    ENP2 <= '0';
+                    ENP3 <= '0';
+						  sel_tiempo <='11';
+				
+                    estadoSiguiente <= EsperandoPersonas;
+                end if;
+
+            when EncendidoP1 =>
+                if (Start = '0') then
+                    estadoSiguiente <= EsperandoStart;
+                else
+                    estadoSiguiente <= EncendidoP1;
+                end if;
+
+            when EncendidoP2 =>
+                if (Start = '0') then
+                    estadoSiguiente <= EsperandoStart;
+                else
+                    estadoSiguiente <= EncendidoP2;
+                end if;
+
+            when EncendidoP3 =>
+                if (Start = '0') then
+                    estadoSiguiente <= EsperandoStart;
+                else
+                    estadoSiguiente <= EncendidoP3;
+                end if;
+
+            when others =>
+                estadoSiguiente <= Inicio;
+			
+				when  FinEsc =>
+						if (FinW ='1') then
+							EnR<='1';
+						estadoSiguiente <= FinLec;
+						else
+						estadosiguiente <= FinEsc;
+				when FinLec =>
+				 selector <= sel_tiempo;
+				 if (FinR = '1') then
+					  
+					  case selector is
+							when "00" =>
+								  EnReg1 <= '1';
+					  
+							when "01" =>
+								 EnReg2 <= '1';
+								 
+							when "10" =>
+								 EnReg3 <= '1';
+								 
+							when others =>
+								  null;
+					  end case;
+
+					  estadoSiguiente <= Inicio;  -- Reemplaza AlgunOtroEstado con el estado deseado después de FinLec
+				 else
+					  estadoSiguiente <= FinLec;
+				 end if;
+				
+        end case;
+    end process proceso_transiciones;
+
+end Behavioral;

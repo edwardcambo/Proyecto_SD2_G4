@@ -1,0 +1,19 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use IEEE.STD_LOGIC_signed.all;
+
+ENTITY sumador8 IS
+PORT (a : IN std_logic_vector(7 DOWNTO 0); b : IN std_logic_vector(7 DOWNTO 0);
+salida : OUT std_logic_vector(7 DOWNTO 0);
+cout: out std_logic);
+END sumador8;
+
+ARCHITECTURE sol OF sumador8 IS
+signal suma: std_logic_vector(8 DOWNTO 0); BEGIN
+
+suma <= (('0'&a)+('0'&b));
+
+
+salida<= suma(7 DOWNTO 0); cout<= suma(8);
+
+END sol;

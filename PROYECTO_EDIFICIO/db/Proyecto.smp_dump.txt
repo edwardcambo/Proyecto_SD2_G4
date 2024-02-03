@@ -1,0 +1,13 @@
+
+State Machine - |Proyecto|mssfinal:inst29|y
+Name y.Tg y.Tf y.Te y.Td2 y.Td1 y.Tc2 y.Tc1 y.Tb y.Taa y.Ta 
+y.Ta 0 0 0 0 0 0 0 0 0 0 
+y.Taa 0 0 0 0 0 0 0 0 1 1 
+y.Tb 0 0 0 0 0 0 0 1 0 1 
+y.Tc1 0 0 0 0 0 0 1 0 0 1 
+y.Tc2 0 0 0 0 0 1 0 0 0 1 
+y.Td1 0 0 0 0 1 0 0 0 0 1 
+y.Td2 0 0 0 1 0 0 0 0 0 1 
+y.Te 0 0 1 0 0 0 0 0 0 1 
+y.Tf 0 1 0 0 0 0 0 0 0 1 
+y.Tg 1 0 0 0 0 0 0 0 0 1 

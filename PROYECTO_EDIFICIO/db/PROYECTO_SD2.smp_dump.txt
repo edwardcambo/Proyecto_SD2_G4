@@ -1,0 +1,6 @@
+
+State Machine - |multiplicador|y
+Name y.Tc y.Tb y.Ta 
+y.Ta 0 0 0 
+y.Tb 0 1 1 
+y.Tc 1 0 1 

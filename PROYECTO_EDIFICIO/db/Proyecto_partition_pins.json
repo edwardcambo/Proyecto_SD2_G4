@@ -1,0 +1,317 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "FIN",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "Hora",
+					"strict" : false
+				},
+				{
+					"name" : "igual_a_24",
+					"strict" : false
+				},
+				{
+					"name" : "enCont",
+					"strict" : false
+				},
+				{
+					"name" : "en_piso1",
+					"strict" : false
+				},
+				{
+					"name" : "en_piso2",
+					"strict" : false
+				},
+				{
+					"name" : "en_piso3",
+					"strict" : false
+				},
+				{
+					"name" : "centenaP1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "centenaP1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "centenaP1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "centenaP1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "centenaP1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "centenaP1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "P3[9]",
+					"strict" : false
+				},
+				{
+					"name" : "P3[8]",
+					"strict" : false
+				},
+				{
+					"name" : "P3[7]",
+					"strict" : false
+				},
+				{
+					"name" : "P3[6]",
+					"strict" : false
+				},
+				{
+					"name" : "P3[5]",
+					"strict" : false
+				},
+				{
+					"name" : "P3[4]",
+					"strict" : false
+				},
+				{
+					"name" : "P3[3]",
+					"strict" : false
+				},
+				{
+					"name" : "P3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "P3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "P3[0]",
+					"strict" : false
+				},
+				{
+					"name" : "decenaP1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "decenaP1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "decenaP1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "decenaP1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "decenaP1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "decenaP1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "decenaP1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "P1[9]",
+					"strict" : false
+				},
+				{
+					"name" : "P1[8]",
+					"strict" : false
+				},
+				{
+					"name" : "P1[7]",
+					"strict" : false
+				},
+				{
+					"name" : "P1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "P1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "P1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "P1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "P1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "P1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "P1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "P2[9]",
+					"strict" : false
+				},
+				{
+					"name" : "P2[8]",
+					"strict" : false
+				},
+				{
+					"name" : "P2[7]",
+					"strict" : false
+				},
+				{
+					"name" : "P2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "P2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "P2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "P2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "P2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "P2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "P2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "PISO1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "PISO1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "PISO1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "PISO2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "PISO2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "PISO2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "PISO3[6]",
+					"strict" : false
+				},
+				{
+					"name" : "PISO3[3]",
+					"strict" : false
+				},
+				{
+					"name" : "PISO3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "PISO3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "unidadP1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "unidadP1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "unidadP1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "unidadP1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "unidadP1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "unidadP1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "unidadP1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SL1",
+					"strict" : false
+				},
+				{
+					"name" : "SM1",
+					"strict" : false
+				},
+				{
+					"name" : "SL2",
+					"strict" : false
+				},
+				{
+					"name" : "SM2",
+					"strict" : false
+				},
+				{
+					"name" : "SL3",
+					"strict" : false
+				},
+				{
+					"name" : "SM3",
+					"strict" : false
+				},
+				{
+					"name" : "resetP",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
+					"strict" : false
+				},
+				{
+					"name" : "BStart",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
